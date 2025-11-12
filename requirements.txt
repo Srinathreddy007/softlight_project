@@ -1,0 +1,10 @@
+langgraph>=0.2.34
+langchain-core>=0.2.0
+langchain-ollama
+
+playwright
+
+langchain-openai>=0.1.6
+python-dotenv
+tqdm
+requests

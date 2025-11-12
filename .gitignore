@@ -1,0 +1,19 @@
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+*.so
+
+# Virtual envs
+.venv/
+venv/
+softlight-env/
+
+# Tools & artifacts
+playwright_data/
+screenshots/
+*.log
+.DS_Store
+.idea/
+.vscode/
