@@ -9,6 +9,7 @@ __pycache__/
 .venv/
 venv/
 softlight-env/
+.env
 
 # Tools & artifacts
 playwright_data/
@@ -17,3 +18,4 @@ screenshots/
 .DS_Store
 .idea/
 .vscode/
+
