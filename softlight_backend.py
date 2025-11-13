@@ -963,7 +963,7 @@ def planner_node(state: AgentState) -> AgentState:
     task = state["task"]
     steps = state.get("steps", [])
     last_obs = steps[-1]["observation"] if steps else None
-    max_steps = state.get("max_steps", 20)
+    max_steps = state.get("max_steps", 10)
 
     if len(steps) >= max_steps:
         action = PlanStep(
@@ -1389,7 +1389,7 @@ def build_graph():
 
 # Orchestrator
 
-def run_task(task: str, headless: bool = True, max_steps: int = 20) -> AgentState:
+def run_task(task: str, headless: bool = True, max_steps: int = 10) -> AgentState:
     global BROWSER
     app = build_graph()
 
@@ -1449,7 +1449,7 @@ if __name__ == "__main__":
         print("TASK:", t)
 
         # NOTE: First run per host must be headless=False so you can log in manually.
-        result = run_task(t, headless=False, max_steps=20)
+        result = run_task(t, headless=False, max_steps=10)
 
         steps = result.get("steps", [])
         print(f"\nCaptured {len(steps)} key steps for task: {t!r}")
